@@ -9,9 +9,9 @@ using System.Net.Http; // adicionado dependencia
 using System.Net.Http.Headers; // adicionado dependencia
 using Newtonsoft.Json; // adicionado dependencia
 
-namespace PokemonWebApp.Pages
+namespace PokemonWebApp.Pages.Pokemons
 {
-    public class PokemonModel : PageModel
+    public class IndexModel : PageModel
     {
         public List<Pokemon> Pokemons { get; private set; } = new List<Pokemon>();  // adiciona uma variável para receber os dados da lista de pokemons que será recebida
         string baseUrl = "https://localhost:44391/"; // variável com o link do servidor base da API

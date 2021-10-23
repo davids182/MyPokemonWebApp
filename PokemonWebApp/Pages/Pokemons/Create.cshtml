@@ -1,0 +1,64 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.CreateModel
+@{
+}
+
+<h2 class="text-center"> Adicionar Pokemon </h2>
+<hr>
+
+<form method="post" action="">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Nome" class="control-label"> Nome </label>
+                <input type="text" class="form-control" id="nome" name="Nome" required>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Tipo" class="control-label">Tipo</label>
+                <select class="form-control" id="tipo" name="Tipo" required>
+                    <option>Aço </option>
+                    <option>Água</option>
+                    <option>Dragão</option>
+                    <option>Elétrico</option>
+                    <option>Fada</option>
+                    <option>Fantasma</option>
+                    <option>Fogo</option>
+                    <option>Gelo</option>
+                    <option>Inseto</option>
+                    <option>Lutador</option>
+                    <option>Normal</option>
+                    <option>Pedra</option>
+                    <option>Planta</option>
+                    <option>Psíquico</option>
+                    <option>Sombrio</option>
+                    <option>Terra</option>
+                    <option>Venenoso</option>
+                    <option>Voador</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="Poderes" class="control-label">Habilidade</label>
+                <input type="text" class="form-control" id="Poderes" name="Poderes" required>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="Imagem" class="control-label">Endereço da imagem</label>
+                <input type="text" class="form-control" id="Imagem" name="Imagem" required>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </div>
+
+</form>

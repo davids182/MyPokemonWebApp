@@ -1,10 +1,11 @@
 ﻿@page
-@model PokemonWebApp.Pages.PokemonModel
+@model PokemonWebApp.Pages.Pokemons.IndexModel
 @{
 }
 
 <div class="container">
-    <h2 class="text-cente"> Lista de Pokemons </h2> 
+    <h2 class="text-center"> POKEDEX</h2> 
+    <a class="btn btn-outline-primary align-content-end" asp-page="/Pokemons/Create"><b>Novo</b></a>
     <section class="d-flex">
     @foreach (var data in Model.Pokemons)
     {
@@ -14,15 +15,11 @@
         <div class="pokemon-info">
             <table>
                 <tr><td>@Html.DisplayFor(modelItem => data.ID) <h3> @Html.DisplayFor(modelItem => data.Nome)</h3></td></tr>
-                <tr><td>Tipo: @Html.DisplayFor(modelItem => data.Tipo)</td></tr>
-                <tr><td>Poderes: @Html.DisplayFor(modelItem => data.Poderes)</td></tr>
-                
+                <tr><td><b>Tipo:</b> @Html.DisplayFor(modelItem => data.Tipo)</td></tr>
+                <tr><td><b>Habilidade:</b> @Html.DisplayFor(modelItem => data.Poderes)</td></tr>
             </table>
         </div>
-        <div>
-        </div>
-
-            
+                           
      }
-</section>
- </div>
+    </section>
+</div>
