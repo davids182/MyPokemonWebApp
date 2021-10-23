@@ -1,0 +1,46 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.EditModel
+@{
+}
+<h2 class="text-center"> Editar Pokemon </h2>
+<hr>
+
+<form method="post">
+
+    <div class="row">
+        <input type="hidden" asp-for="Pokemon.ID">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Pokemon.Nome" class="control-label">Nome </label>
+                <input asp-for="Pokemon.Nome" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Pokemon.Tipo" class="control-label">Tipo</label>
+                <input asp-for="Pokemon.Tipo" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Pokemon.Poderes" class="control-label">Habilidade</label>
+                <input asp-for="Pokemon.Poderes" class="form-control">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Pokemon.Imagem" class="control-label">Endereço da imagem</label>
+                <input asp-for="Pokemon.Imagem" class="form-control">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group">
+            <input type="submit" value="Salvar" class="btn btn-primary" />
+            
+        </div>
+    </div>
+
+</form>

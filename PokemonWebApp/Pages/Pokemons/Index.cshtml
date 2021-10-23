@@ -17,8 +17,10 @@
                 <tr><td>@Html.DisplayFor(modelItem => data.ID) <h3> @Html.DisplayFor(modelItem => data.Nome)</h3></td></tr>
                 <tr><td><b>Tipo:</b> @Html.DisplayFor(modelItem => data.Tipo)</td></tr>
                 <tr><td><b>Habilidade:</b> @Html.DisplayFor(modelItem => data.Poderes)</td></tr>
+                <tr><td><a class="btn btn-info" asp-page="/Pokemons/Detail" asp-route-id="@data.ID"> Ver</a></td></tr>
             </table>
         </div>
+       
                            
      }
     </section>

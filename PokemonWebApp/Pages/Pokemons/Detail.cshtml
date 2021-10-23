@@ -1,0 +1,36 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.DetailModel
+@{
+}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="text-center"> @Html.DisplayFor(modelItem => Model.Pokemon.Nome)</h1>
+        <img class="mx-auto d-block" style="border:8px" src="@Html.DisplayFor(modelItem => Model.Pokemon.Imagem)" alt="Imagem do @Html.DisplayFor(modelItem => Model.Pokemon.Imagem)">
+
+        <br>
+       
+
+            <div class="pokemon-info">
+
+                <p><b>Número:</b> @Html.DisplayFor(modelItem => Model.Pokemon.ID)</p>
+                <label for="Nome" class="control-label">Nome</label>
+                <input type="text" class="form-control" id="Nome" name="Nome" value=" @Html.DisplayFor(modelItem => Model.Pokemon.Nome)" required>
+                <label for="Tipo" class="control-label">Tipo</label>
+                <input type="text" class="form-control" id="Tipo" name="Tipo" value=" @Html.DisplayFor(modelItem => Model.Pokemon.Tipo)" required>
+                <label for="Poderes" class="control-label">Habilidade</label>
+                <input type="text" class="form-control" id="Poderes" name="Poderes" value=" @Html.DisplayFor(modelItem => Model.Pokemon.Poderes)" required>
+                <label for="Imagem" class="control-label">Endereço da imagem</label>
+                <input type="text" class="form-control" id="Imagem" name="Imagem" value=" @Html.DisplayFor(modelItem => Model.Pokemon.Imagem)" required>
+                <br>
+                <br>
+            </div>
+
+       
+    </div>
+    <div class="col-md-6">
+        <a class="btn btn-outline-primary" asp-page="/Pokemons/Edit" asp-route-id="@Model.Pokemon.ID">Editar</a>
+    </div>
+    <div class="col-md-6">
+        <a class="btn btn-outline-danger">Apagar</a>
+    </div>
+</div>
