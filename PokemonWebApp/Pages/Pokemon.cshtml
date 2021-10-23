@@ -1,0 +1,28 @@
+﻿@page
+@model PokemonWebApp.Pages.PokemonModel
+@{
+}
+
+<div class="container">
+    <h2 class="text-cente"> Lista de Pokemons </h2> 
+    <section class="d-flex">
+    @foreach (var data in Model.Pokemons)
+    {
+        <div class="pokemon-picture">
+            <img src="@Html.DisplayFor(modelItem => data.Imagem)" alt="Imagem do @Html.DisplayFor(modelItem => data.Imagem)">
+        </div>
+        <div class="pokemon-info">
+            <table>
+                <tr><td>@Html.DisplayFor(modelItem => data.ID) <h3> @Html.DisplayFor(modelItem => data.Nome)</h3></td></tr>
+                <tr><td>Tipo: @Html.DisplayFor(modelItem => data.Tipo)</td></tr>
+                <tr><td>Poderes: @Html.DisplayFor(modelItem => data.Poderes)</td></tr>
+                
+            </table>
+        </div>
+        <div>
+        </div>
+
+            
+     }
+</section>
+ </div>
