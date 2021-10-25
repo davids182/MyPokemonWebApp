@@ -1,0 +1,22 @@
+﻿@page
+@model PokemonWebApp.Pages.Pokemons.DeleteModel
+@{
+}
+<div class="container">
+   
+        <h3> Você deseja realmente deletar o pokemon <b> @Html.DisplayFor(model => model.Pokemon.Nome) </b> ?</h3>
+        <hr>
+    
+    <form method="post">
+        <div class="row">
+            <input type="hidden" asp-for="Pokemon.ID">
+            <div class="col-md-6">
+                <input type="Submit" value="Confimar" class="btn btn-danger">
+            </div>
+            <div class="col-md-6">
+                <input type="button" class="btn btn-outline-primary" value="Cancelar" onClick="history.go(-1)">
+            </div>
+        </div>
+    </form>
+</div>
+    

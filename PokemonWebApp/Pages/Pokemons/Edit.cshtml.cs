@@ -32,7 +32,7 @@ namespace PokemonWebApp.Pages.Pokemons
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.GetAsync("api/Pokemons/" + id); // retorna a página com o resultado onde o Id do pokemon é ugual a vaariável ID
+                HttpResponseMessage response = await client.GetAsync("api/Pokemons/" + id); // retorna a página com o resultado onde o Id do pokemon é igual a variável ID do botão editar na página de detalhes
                 if (response.IsSuccessStatusCode)
                 {
                     string result = response.Content.ReadAsStringAsync().Result;
@@ -54,7 +54,7 @@ namespace PokemonWebApp.Pages.Pokemons
                 client.DefaultRequestHeaders.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-                HttpResponseMessage response = await client.PutAsJsonAsync("api/Pokemons/" + Pokemon.ID, Pokemon);
+                HttpResponseMessage response = await client.PutAsJsonAsync("api/Pokemons/" + Pokemon.ID, Pokemon); // executa o POST
 
                 if (response.IsSuccessStatusCode)
                 {
