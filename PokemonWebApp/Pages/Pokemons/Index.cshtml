@@ -4,25 +4,26 @@
 }
 
 <div class="container">
-    <h2 class="text-center"> POKEDEX</h2> 
+    <h2 class="text-center"> POKÉMONS</h2>
     <hr>
-    <a class="btn btn-outline-primary align-content-end" asp-page="/Pokemons/Create"><b>Novo</b></a>
+    <a class="btn btn-outline-primary align-content-center" asp-page="/Pokemons/Create"><b>Novo</b></a>
+    <hr>
     <section class="d-flex">
-    @foreach (var data in Model.Pokemons)
-    {
-        <div class="pokemon-picture">
-            <img src="@Html.DisplayFor(modelItem => data.Imagem)" alt="Imagem do @Html.DisplayFor(modelItem => data.Imagem)">
-        </div>
-        <div class="pokemon-info">
-            <table>
-                <tr><td>@Html.DisplayFor(modelItem => data.ID) <h3> @Html.DisplayFor(modelItem => data.Nome)</h3></td></tr>
-                <tr><td><b>Tipo:</b> @Html.DisplayFor(modelItem => data.Tipo)</td></tr>
-                <tr><td><b>Habilidade:</b> @Html.DisplayFor(modelItem => data.Poderes)</td></tr>
-                <tr><td><a class="btn btn-info" asp-page="/Pokemons/Detail" asp-route-id="@data.ID"> Ver</a></td></tr>
-            </table>
-        </div>
-       
-                           
-     }
+        @foreach (var data in Model.Pokemons)
+        {
+            <div class="pokemon-picture">
+                <img src="@Html.DisplayFor(modelItem => data.Imagem)" alt="Imagem do @Html.DisplayFor(modelItem => data.Imagem)">
+            </div>
+            <div class="pokemon-info">
+                <table>
+                    <tr><td>@Html.DisplayFor(modelItem => data.ID) <h3> @Html.DisplayFor(modelItem => data.Nome)</h3></td></tr>
+                    <tr><td><b>Tipo:</b> @Html.DisplayFor(modelItem => data.Tipo)</td></tr>
+                    <tr><td><b>Habilidade:</b> @Html.DisplayFor(modelItem => data.Poderes)</td></tr>
+                    <tr><td><a class="btn btn-outline-primary" asp-page="/Pokemons/Detail" asp-route-id="@data.ID"><b> Ver </b></a></td></tr>
+                </table>
+            </div>
+
+
+        }
     </section>
 </div>
