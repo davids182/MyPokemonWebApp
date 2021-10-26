@@ -5,10 +5,12 @@
 <h2 class="text-center"> Editar Pokemon </h2>
 <hr>
 
-<form method="post">
+<form method="post"> <!--Fomulário com método post-->
 
     <div class="row">
-        <input type="hidden" asp-for="Pokemon.ID">
+        <input type="hidden" asp-for="Pokemon.ID"> <!-- campo  oculto com a informação de ID do pokemon-->
+        
+        <!--insere os campos dando como valores os dados do objeto Pokemon que se oriunda da API pokemon -->
         <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="Pokemon.Nome" class="control-label">Nome </label>

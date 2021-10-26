@@ -46,7 +46,7 @@ namespace PokemonWebApp.Pages.Pokemons
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync() // funçao editar 
+        public async Task<IActionResult> OnPostAsync() // funçao editar com o POST
         {
             using (var client = new HttpClient())
             {

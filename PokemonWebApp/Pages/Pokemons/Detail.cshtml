@@ -9,7 +9,7 @@
 
         <br>
 
-
+        <!-- dados do objeto Pokemon que se oriunda da API pokemon -->
         <div class="pokemon-info">
 
             <p><b>Número:</b> @Html.DisplayFor(modelItem => Model.Pokemon.ID)</p>
@@ -28,10 +28,10 @@
 
     </div>
     <div class="col-md-3">
-        <a class="btn btn-outline-primary" asp-page="/Pokemons/Edit" asp-route-id="@Model.Pokemon.ID">Editar</a>
+        <a class="btn btn-outline-primary" asp-page="/Pokemons/Edit" asp-route-id="@Model.Pokemon.ID">Editar</a> <!-- botão que chama a página e envia o ID do pokemon-->
     </div>
     <div class="col-md-3">
-        <a class="btn btn-outline-danger" asp-page="/Pokemons/Delete" asp-route-id="@Model.Pokemon.ID">Apagar</a>
+        <a class="btn btn-outline-danger" asp-page="/Pokemons/Delete" asp-route-id="@Model.Pokemon.ID">Apagar</a><!-- botão que chama a página e envia o ID do pokemon-->
     </div>
     <div class="col-md-3">
         <input type="button" class="btn btn-outline-primary" value="Voltar" onClick="history.go(-1)">

@@ -6,8 +6,10 @@
 <div class="container">
     <h2 class="text-center"> POKÉMONS</h2>
     <hr>
-    <a class="btn btn-outline-primary align-content-center" asp-page="/Pokemons/Create"><b>Novo</b></a>
+    <a class="btn btn-outline-primary align-content-center" asp-page="/Pokemons/Create"><b>Novo</b></a> <!-- insere botão que chama uma página -->
     <hr>
+
+    <!-- insere os dados dos pokemons um por um enquanto existir pokemons no banco de dados da memória-->
     <section class="d-flex">
         @foreach (var data in Model.Pokemons)
         {
